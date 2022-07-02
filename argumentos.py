@@ -1,5 +1,3 @@
-import sys
-
 # Libreria contenedora de argv para pasar parametros por consola
 import sys
 
