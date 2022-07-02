@@ -19,7 +19,7 @@ print("----------------------")
 print("Conversión de divisas")
 print("----------------------")
 
-# Proceso
+# Proceso de conversion de divisas
 resultado_1 = peso_chileno * sol
 resultado_2 = peso_chileno * peso_argentino
 resultado_3 = peso_chileno * dolar
