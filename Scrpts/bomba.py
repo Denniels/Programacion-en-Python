@@ -1,11 +1,14 @@
+# Librerias necesarias para ingresar parametros por conbsola y la funciona time para el control del tiempo
 import sys, time
 
-i = int(sys.argv[1]) # Fijamos el valor inicial
+# Fijamos el valor inicial del temporizador
+tiempo = int(sys.argv[1]) 
 
-while i > 0:
-    print(i)
+# Ciclo while que nos permite realizar conteo
+while tiempo > 0:
+    print(tiempo)
     time.sleep(1)
-    i -= 1
-    
-print("Boooom")
+    tiempo -= 1
 
+# Salida que nos permite ver las iteraciones del while
+print("Boooom")
