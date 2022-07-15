@@ -11,19 +11,19 @@ else:
         print ('Permitirle posición de suficiente ventilación')
 
     else:
-        print ('Administrar 5 Ventilaciones y llamar a Ambulancia')
+        print ('Administrar 5 ventilaciones y llamar a ambulancia')
         ambulancia = 'no'
 
         while ambulancia == 'no':
-            signos = input("¿Signos de Vida?: ").lower()
+            vida = input("¿Signos de Vida?: ").lower()
 
-            if signos == 'si':
+            if vida == 'si':
                 print ('Reevaluar a la espera de la Ambulancia')           
                 ambulancia = input("¿Llegó la Ambulancia?: ").lower()
 
             else:
-                print ('Administrar Compresiones Torácicas hasta que llegue ambulancia')
-                ambulancia = input("¿Llegó la Ambulancia?: ").lower()
+                print ('Administrar compresiones torácicas hasta que llegue ambulancia')
+                ambulancia = input("¿Llegó la ambulancia?: ").lower()
 
 print ('Fin')
 
