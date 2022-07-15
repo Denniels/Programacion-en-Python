@@ -2,10 +2,7 @@ from sys import argv
 
 consulta = int(argv[1])
 
-resultado = {}
-
-ventas = {
-          "Enero": 15000,
+ventas = {"Enero": 15000,
           "Febrero": 22000,
           "Marzo": 12000,
           "Abril": 17000,
@@ -16,9 +13,6 @@ ventas = {
           "Septiembre": 25000,
           "Octubre": 21500,
           "Noviembre": 91000,
-          "Diciembre": 21000,
-          }
+          "Diciembre": 21000,}
 
-for i in ventas.values():
-    i.append(resultado)
-print(resultado)
+valores = ventas.values()
