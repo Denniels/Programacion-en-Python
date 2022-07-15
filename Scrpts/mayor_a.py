@@ -19,4 +19,6 @@ ventas = {
           "Diciembre": 21000,
           }
 
-print(f"{ventas}")
+for i in ventas.values():
+    i.append(resultado)
+print(resultado)
