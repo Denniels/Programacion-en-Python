@@ -26,15 +26,8 @@ ventas = {"Enero": 15000,
           "Noviembre": 91000,
           "Diciembre": 21000,}
 
-
 for mes in ventas.keys():
     if ventas.get(mes) > consulta:
-        resultado[mes]=ventas.get(mes)
+        resultado[mes] = ventas.get(mes)
 
 print(resultado)
-
-
-
-'''for i in ventas:
-    if ventas.get(i) > consulta:
-        print(i, ventas.get(i))'''
