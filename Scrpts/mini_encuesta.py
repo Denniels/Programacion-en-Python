@@ -19,7 +19,6 @@ print(f'La respuesta a la pregunta 3 fue {respuestas[2]}')
 
 print(f'Gracias por responder la encuesta')
 
-
 '''
 todo esto se resume con funciones
 # Inicio de preguntas
