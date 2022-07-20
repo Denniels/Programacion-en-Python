@@ -7,10 +7,13 @@ velocidad = [25, 12, 19, 16, 11, 11, 24, 1, 14, 14,
 
 promedio = sum(velocidad) / len(velocidad)
 
-resultado = []
+def promedio(lista):
+    return sum(lista)/len(lista)
 
-for i in velocidad:
-    if i > promedio:
-        resultado.append(i)
+def filtrar(velocidad):
+    valor_promedio = promedio(velocidad)
+    print(valor_promedio)
+    lista_valores_por_arriba = [i for i, v in enumerate(velocidad) if v > valor_promedio]
+    return lista_valores_por_arriba
 
-print(resultado)
+print(filtrar(velocidad))
