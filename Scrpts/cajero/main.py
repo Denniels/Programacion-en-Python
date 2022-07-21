@@ -44,5 +44,3 @@ if len(sys.argv) == 2:
     mostrar_menu(int(sys.argv[1]))
 else:
     mostrar_menu()
-
-

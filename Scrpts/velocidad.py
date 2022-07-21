@@ -5,8 +5,6 @@ velocidad = [25, 12, 19, 16, 11, 11, 24, 1, 14, 14,
              23, 3, 5, 9, 5, 3, 12, 20, 5, 11, 10, 
              18, 10, 14, 5, 23, 20, 23, 21]
 
-promedio = sum(velocidad) / len(velocidad)
-
 def promedio(lista):
     return sum(lista)/len(lista)
 

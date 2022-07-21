@@ -1,7 +1,3 @@
-prod_1 =  [4, 6, 7, 4, 3] 
-fact_1 = 5
-fatc_2 = 6 
-
 def factorial(n): 
     return 1 if (n==1 or n==0) else n * factorial(n - 1)
 
@@ -11,8 +7,12 @@ def productoria(prod_1) :
          result = result * x 
     return result
 
-print("El factorial de",fact_1,"es", factorial(fact_1))
-print("La productoria de",prod_1,"es", productoria(prod_1))
-print("El factorial de",fatc_2,"es", factorial(fatc_2))
+def calcular(**parametros):
+    for key, value in parametros.items():
+        if type(value) == int:
+            print(f"El factorial de {value} es {factorial(value)}")
 
+        elif type(value) == list:
+            print(f"La productoria de {value} es {productoria(value)}")        
 
+calcular(fact_1 = 5, prod_1 = [4, 6, 7, 4, 3], fact_2 = 6)
