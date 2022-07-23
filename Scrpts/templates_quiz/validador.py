@@ -1,15 +1,10 @@
+def validate(numeros, eleccion):# Definir validación de eleccion
+    while True:
+        if eleccion not in numeros:
+            print('Opcion invalida, ingrasa un opcion valida')
 
-def validate(opciones, eleccion):# Definir validación de eleccion
-    while opciones != list(opciones):
-        if eleccion not in opciones:
-                print(eleccion)
-                
         else:
-            print("Opción inválida, ingrese una opcion valida: ")
-
-    #pass
-
-
+            return eleccion
 
 if __name__ == '__main__':
     
