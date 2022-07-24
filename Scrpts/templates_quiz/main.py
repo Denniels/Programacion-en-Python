@@ -1,5 +1,3 @@
-
-# No modificar
 from verify import verificar
 import preguntas as p
 from question import choose_q
@@ -29,7 +27,13 @@ opcion = input('''Ingrese una opción para Jugar!
         
     > ''')
 # 1. validar opcion
-opcion = 
+opciones = ["0","1"]
+if opcion in opciones:
+    pass
+else:
+    os.system(op_sys)
+    sys.exit("System Exiting")
+#opcion = 
 
 # 2. Definir el comportamiento de Salir
 if opcion == '0':
@@ -37,7 +41,7 @@ if opcion == '0':
     time.sleep(2)
     os.system(op_sys)
     # finalizar programa
-    
+    sys.exit("System Exiting")
 
 # Funcionamiento de preguntas
 while correcto and n_pregunta < 3*p_level:
@@ -45,30 +49,32 @@ while correcto and n_pregunta < 3*p_level:
     if n_pregunta == 0:
         p_level = input('¿Cuántas preguntas por nivel? (Máximo 3): ')
         # 3. Validar el número de preguntas por nivel
-        p_level = 
+        #INVENTADO VALOR
+        p_level = 3
         
     if continuar == 'y':
         #contador de preguntas
         n_pregunta += 1
         # 4. Escoger el nivel de la pregunta
-        nivel = 
+        nivel = choose_level(n_pregunta, p_level)
         print(f'Pregunta {n_pregunta}:')
         # 5. Escoger el enunciado y las alternativas de una pregunta según el nivel escogido
-        enunciado, alternativas = 
+        enunciado, alternativas = choose_q(nivel)
         #6. Imprimir el enunciado y sus alternativas en pantalla
         
-        
+        print_pregunta(enunciado,alternativas)
+
         respuesta = input('Escoja la alternativa correcta:\n> ').lower()
         # 7. Validar la respuesta entregada
-        respuesta = 
+        respuesta = validate(alternativas,respuesta)
         # 8. Verificar si la respuesta es correcta o no
-        correcto = 
+        correcto = verificar(alternativas,respuesta)
         
         if correcto and n_pregunta < 3*p_level:
             print('Muy bien sigue así!')
             continuar = input('Desea continuar? [y/n]: ').lower()
             #9. Validar si es que se responde y o n
-            continuar = 
+            continuar = "y"
             os.system(op_sys)
         elif correcto and n_pregunta == 3*p_level:
             print(f'Felicitaciones, Has respondido {3*p_level} preguntas correctas. \n Has ganado la Trivia \n Gracias por Jugar, hasta luego!!!')
