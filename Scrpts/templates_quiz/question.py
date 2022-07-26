@@ -3,11 +3,10 @@ import random
 from shuffle import shuffle_alt
 
 # Opciones dadas para escoger.
-###############################################
 opciones = {'basicas': [1,2,3],
             'intermedias': [1,2,3],
             'avanzadas': [1,2,3]}
-###############################################
+
 
 def choose_q(dificultad):
     

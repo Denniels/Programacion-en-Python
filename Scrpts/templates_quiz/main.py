@@ -1,5 +1,4 @@
-
-# No modificar
+# Importacion de modulos
 from verify import verificar
 import preguntas as p
 from question import choose_q
@@ -17,9 +16,6 @@ correcto = True
 p_level = 10
 op_sys = 'cls' if sys.platform == 'win32' else 'clear'
 
-
-# ----------------------------------------
-
 os.system(op_sys) # limpiar pantalla
 
 print('Bienvenido a la Trivia')
@@ -36,10 +32,9 @@ if opcion == '0':
     print('Nos vemos pronto!')
     time.sleep(2)
     os.system(op_sys)
-    exit()
+    exit() #Solo faltaba este exit()
     # finalizar programa
     
-
 # Funcionamiento de preguntas
 while correcto and n_pregunta < 3*p_level:
     
