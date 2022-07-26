@@ -1,10 +1,14 @@
 import preguntas as p
 
 def print_pregunta(enunciado, alternativas):
-    
+    alternativas.reverse()
     # Imprimir enunciado y alternativas
     ###############################################################
-    pass
+    print(enunciado[0])
+    print('\n')
+    orden = ['A. ','B. ','C. ','D. ']
+    for i in range(len(alternativas)):
+      print(orden[i] + alternativas[i][0])
     
     
     
