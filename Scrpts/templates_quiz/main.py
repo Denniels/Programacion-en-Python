@@ -36,6 +36,7 @@ if opcion == '0':
     print('Nos vemos pronto!')
     time.sleep(2)
     os.system(op_sys)
+    exit()
     # finalizar programa
     
 
