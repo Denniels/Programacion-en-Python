@@ -1,14 +1,15 @@
 
 import requests, json
 
-url = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos'
+url = 'https://reqres.in/api/users'
 
 '''{"title":"Cambio de post",
-                "body": "Este es un cambio en el post 20", 
-                "userId":"d.mardones.s@gmail.com",
+                "body": "Este es un cambio en el post 20"
                 }'''
 
-playloads = {'Authorization' :'I1n7ru8DjxuiUdc5saiGiFJfKFo2ZrbNAHwiUzdc'}
+playloads = '''{"title":"primer post",
+                "body": "Este es el primer post"
+                }'''
 headers = {'Content-type':'Application/json'}
 
 response = requests.request('GET',  url, data = playloads, headers = headers)
