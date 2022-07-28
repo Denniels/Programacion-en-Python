@@ -17,4 +17,4 @@ for i in range(25):
     x = results["latest_photos"][i]["img_src"]
     z.append(x)
 
-print(z)
+print((z))

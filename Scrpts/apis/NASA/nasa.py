@@ -1,19 +1,18 @@
-import requests, json
+from build_web import build_web_page , Template
 
-url = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos'
+html_template = Template('''<!DOCTYPE html>
+                            <html>
+                            <head>
+                            <title>25 Curiosity photos</title>
+                            </head>
+                            <body>
 
-playloads = ''
-headers = {'x-api-key": "I1n7ru8DjxuiUdc5saiGiFJfKFo2ZrbNAHwiUzdc'}
+                            <h1>25 Curiosity photos</h1>   
 
-response = requests.request('GET',  url, headers = headers, data = playloads)
-result = json.loads(response.text)
-print(result)
+                            $body
 
-'''# import requests module
-import requests
+                            </body>
+                            </html>
+                        ''')
 
-# Making a get request
-r = requests.get('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos')
-# print request object
-'''
-
+build_web_page(html_template)
