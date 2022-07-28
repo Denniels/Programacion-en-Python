@@ -4,7 +4,7 @@ from string import Template
 html_template = Template('''<!DOCTYPE html>
                             <html>
                             <head>
-                            <title>25 Curiosity photos</title>
+                            <title>Curiosity photos</title>
                             </head>
                             <body>
 
@@ -13,8 +13,7 @@ html_template = Template('''<!DOCTYPE html>
                             $body
 
                             </body>
-                            </html>
-                        ''')
+                            </html>''')
 
 def request(url):
     payload = ""

@@ -1,6 +1,21 @@
 from string import Template
 import requests, json
 
+html_template = Template('''<!DOCTYPE html>
+                            <html>
+                            <head>
+                            <title>Curiosity photos</title>
+                            </head>
+                            <body>
+
+                            <h1>25 Curiosity photos</h1>   
+
+                            $body
+
+                            </body>
+                            </html>
+                        ''')
+
 def request(url):
     payload = ""
     headers = headers = {"api_key" : "I1n7ru8DjxuiUdc5saiGiFJfKFo2ZrbNAHwiUzdc"}
@@ -12,6 +27,7 @@ url = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?so
 results = request(url)
 
 z=[]
+
 for i in range(25):
     x= results["latest_photos"][i]["img_src"]
     z.append(x)
