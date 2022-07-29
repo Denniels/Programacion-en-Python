@@ -4,11 +4,11 @@ from string import Template
 html_template = Template('''<!DOCTYPE html>
                             <html>
                             <head>
-                            <title>Curiosity photos</title>
+                            <title>Person photos</title>
                             </head>
                             <body>
 
-                            <h1>25 Curiosity photos</h1>   
+                            <h1>Person photos</h1>   
 
                             $body
 
