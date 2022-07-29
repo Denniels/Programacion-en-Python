@@ -23,38 +23,46 @@ headers = {'Content-type':'Application/json'}
 response = requests.request('GET',  url, data = playloads)
 result = json.loads(response.text)
 
-print(type(result))
-print(len(result))
-#print(result[5]['images']['full'])
-#print(result)
-
 z=[]
-for i in range(5):
+for i in range(15):
     x= result[i]['images']['full']
     z.append(x)
-'''
+
 h=[]
-for j in range(5):
+for j in range(15):
     w= result[j]['name']['spanish']
     h.append(w)
 
 g=[]
-for k in range(5):
+for k in range(15):
     u= result[k]['name']['english']
-    g.append(u)'''
+    g.append(u)
 
 
-#SSSprint(f'{z}"\n"{h}"\n"{g}')
+#print(f'{z}"\n"{h}"\n"{g}')
 
 def build_web_page(html_template):
     img_template = Template('<img src="$url">')
+    h_template = Template('<p>$url</p>')
+    g_template = Template('<p>$url</p>')
     texto_img = ''
+    texto_h = ''
+    texto_g = ''
+
     for url in z:
         texto_img += img_template.substitute(url = url) +'\n'
+    for url in h:
+        texto_h += h_template.substitute(url = url) +'\n'
+    for url in g:
+        texto_g += g_template.substitute(url = url) +'\n'
 
     html = html_template.substitute(body = texto_img)
+    html1 = html_template.substitute(body = texto_h)
+    html2 = html_template.substitute(body = texto_g)
 
     with open('output.html', 'w') as f:
         f.write(html)
+        f.write(html1)
+        f.write(html2)
 
 build_web_page(html_template)
