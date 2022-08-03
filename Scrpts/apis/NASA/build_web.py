@@ -1,5 +1,6 @@
 from string import Template
-import requests, json
+import requests
+import json
 
 html_template = Template('''<!DOCTYPE html>
                             <html>
@@ -18,14 +19,14 @@ html_template = Template('''<!DOCTYPE html>
 
 def request(url):
     payload = ""
-    headers = headers = {"api_key" : "I1n7ru8DjxuiUdc5saiGiFJfKFo2ZrbNAHwiUzdc"}
+    headers = headers = {"api_key" : "gWUcmw9gZkOevaD6ZXAzCyORwAhLHV7Nq9A4lUdg"}
     response = requests.request("GET",url, data = payload, headers = headers)
     return json.loads(response.text)
 
-url = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?sol=25&api_key=I1n7ru8DjxuiUdc5saiGiFJfKFo2ZrbNAHwiUzdc"
+url = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=gWUcmw9gZkOevaD6ZXAzCyORwAhLHV7Nq9A4lUdg" #sol=25&
 
 results = request(url)
-
+print(results)
 z=[]
 
 for i in range(25):

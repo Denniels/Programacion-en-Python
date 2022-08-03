@@ -13,6 +13,7 @@ import sys
 
 clear = 'cls' if sys.platform == 'win32' else 'clear'
 
+
 while True:
     os.system(clear)
     opcion = input(d.MENU)

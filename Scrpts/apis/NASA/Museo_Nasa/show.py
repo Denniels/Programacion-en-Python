@@ -18,3 +18,4 @@ if __name__ == '__main__':
     dict = pull_fotos(2)
     html = create_html_pic(dict)
     show_pic(html, 'apod')
+    

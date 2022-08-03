@@ -11,7 +11,7 @@ def pull_earth(fecha = fecha_ayer, api = d.API_KEY):
     photo_id = [elemento['image'] for elemento in get_url1]
     time = [elemento['date'] for elemento in get_url1]
 
-    url2 = f'https://api.nasa.gov/EPIC/archive/natural/{y}/{m}{d}/png/'
+    url2 = f'https://api.nasa.gov/EPIC/archive/natural/{y}/{m}/{d}/png/'
     end = f'.png?api_key={api}'
 
     return[url2 + id + end for id in photo_id], time
