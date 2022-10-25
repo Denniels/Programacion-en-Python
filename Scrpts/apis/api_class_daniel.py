@@ -17,11 +17,11 @@ html_template = Template('''<!DOCTYPE html>
 
 def request(url):
     payload = ""
-    headers = headers = {"api_key" : "gWUcmw9gZkOevaD6ZXAzCyORwAhLHV7Nq9A4lUdg"}
+    headers = headers = {"api_key" : "RcHSlmsABnzu9xCcjQhQnadBUVP71DrVUXqGUHAf"}
     response = requests.request("GET",url, data = payload, headers = headers)
     return json.loads(response.text)
 
-url = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=gWUcmw9gZkOevaD6ZXAzCyORwAhLHV7Nq9A4lUdg'
+url = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=RcHSlmsABnzu9xCcjQhQnadBUVP71DrVUXqGUHAf'
 
 results= request(url)
 
